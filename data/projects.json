@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "title": "Task Tracker",
+        "description": "A comprehensive task tracking application for managing projects and to-do items. Features include task prioritization, deadline tracking, progress monitoring, and team collaboration capabilities.",
+        "tech": ["Next.js"],
+        "screenshot": "assets/images/projects/task-tracker.jpg",
+        "githubUrl": "https://github.com/blaze910/Task-Tracker",
+        "liveDemoUrl": "https://task-tracker-git-vercel-react-s-56ddbe-blazes-projects-38905151.vercel.app/"
+    },
+    {
+        "id": 2,
+        "title": "Smart Farming Dashboard",
+        "description": "An intelligent agricultural management system that provides real-time monitoring of crop health, soil conditions, and weather data. Includes analytics, predictive insights, and automated alerts for optimal farming decisions.",
+        "tech": ["Next.js", "javascript"],
+        "screenshot": "assets/images/projects/smart-farming-dashboard.jpg",
+        "githubUrl": "https://github.com/yourusername/smart-farming-dashboard",
+        "liveDemoUrl": "https://smart-farming-demo.example.com"
+    },
+    {
+        "id": 3,
+        "title": "Marvel Studio",
+        "description": "A creative studio platform for digital art and design collaboration. Features include project workspace management, real-time collaboration tools, asset library, and portfolio showcase capabilities.",
+        "tech": ["HTML5", "CSS3", "javascript"],
+        "screenshot": "assets/images/projects/marvel-studio.jpg",
+        "githubUrl": "https://github.com/yourusername/marvel-studio",
+        "liveDemoUrl": "https://marvel-studio-demo.example.com"
+    }
+    ,{
+        "id": 4,
+        "title": "Portfolio",
+        "description": "A modern portfolio website showcasing projects and skills. Features include responsive design, smooth animations, and easy navigation.",
+        "tech": ["HTML5", "CSS3", "javascript"],
+        "screenshot": "assets/images/projects/portfolio-website.jpg",
+        "githubUrl": "https://github.com/yourusername/portfolio-website",
+        "liveDemoUrl": "https://portfolio-website-demo.example.com"
+    }
+ 
+]

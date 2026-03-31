@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Stack Web Developer Portfolio - Showcasing React, Node.js, and modern web development expertise.">
+    <title> Blaze.dev </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='white'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='700' fill='%232563eb'%3EB%3C/text%3E%3C/svg%3E">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <span class="logo-text">blaze dev</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="profile-image-container">
+                <img src="assets/images/profile.jpg" alt="Profile photo" class="profile-image">
+            </div>
+            <h1 class="hero-title">Full Stack Web Developer</h1>
+            <p class="hero-tagline">I'm Dango God'spower, I build reliable web apps with React, Next.js, and PostgreSQL.</p>
+            
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://github.com/blaze910" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://wa.me/2348153077566" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:dangogodspower@gmail.com" aria-label="Send email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate full stack developer with 5+ months of experience building scalable web applications. 
+                        I specialize in creating intuitive user interfaces and robust backend systems that solve real-world problems.
+                    </p>
+                    <p>
+                        When I'm not coding, I enjoy writing technical blogs, contributing to open-source projects, 
+                        and exploring emerging web technologies.
+                    </p>
+                    <p><strong>Location:</strong> Rivers, NG</p>
+                    <a href="assets/images/projects/resume/HACKERCHUKWU.pdf" download class="btn btn-primary" aria-label="Download resume">
+                        <i class="fas fa-download"></i> Download Resume (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skills-chips">
+                        <div class="skill-chip" title="Advanced">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <small>Advanced</small>
+                        </div>
+                        <div class="skill-chip" title="Advanced">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <small>Advanced</small>
+                        </div>
+                        <div class="skill-chip" title="Intermediate">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <small>Advanced</small>
+                        </div>
+                        <div class="skill-chip" title="Advanced">
+                            <i class="fab fa-css3"></i>
+                            <span>CSS3</span>
+                            <small>Advanced</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Libraries -->
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills-chips">
+                        <div class="skill-chip" title="Advanced">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <small>Advanced</small>
+                        </div>
+                        <div class="skill-chip" title="Advanced">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.7 2a.7.7 0 0 1 .6.3l9.2 9.2a.7.7 0 0 1-1 1L12 3.7 2.3 12.4a.7.7 0 0 1-1-1l9.2-9.2a.7.7 0 0 1 .2-.2z"/>
+                            </svg>
+                            <span>Next.js</span>
+                            <small>Advanced</small>
+                        </div>
+                        <div class="skill-chip" title="Advanced">
+                            <i class="fab fa-node"></i>
+                            <span>Node.js</span>
+                            <small>Advanced</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases & Tools -->
+                <div class="skill-category">
+                    <h3>Databases & Tools</h3>
+                    <div class="skills-chips">
+                        <div class="skill-chip" title="Advanced">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.86 1.47c-.3.42-.27 1.24.08 2.3l1.3 3.76c.18.51.2 1.03.04 1.52l-2.36 7.59c-.15.48-.37.73-.7.73-.32 0-.75-.3-1.27-.92l-5.68-6.3c-.2-.23-.5-.36-.8-.36H5V7h1c.3 0 .6-.13.8-.36l5.68-6.3c.52-.62.95-.92 1.27-.92.33 0 .55.25.7.73l2.36 7.59c.16.49.14 1.01-.04 1.52l-1.3 3.76c-.35 1.06-.38 1.88-.08 2.3.3.42 1.03.63 2.2.63h1.52v1.5h-1.52c-1.17 0-1.9.21-2.2.63-.3.42-.27 1.24.08 2.3l1.3 3.76c.18.51.2 1.03.04 1.52l-2.36 7.59c-.15.48-.37.73-.7.73-.32 0-.75-.3-1.27-.92l-5.68-6.3c-.2-.23-.5-.36-.8-.36H5v-1.5h1c.3 0 .6-.13.8-.36l5.68-6.3c.52-.62.95-.92 1.27-.92.33 0 .55.25.7.73l2.36 7.59c.16.49.14 1.01-.04 1.52l-1.3 3.76c-.35 1.06-.38 1.88-.08 2.3z"/>
+                            </svg>
+                            <span>PostgreSQL</span>
+                            <small>Advanced</small>
+                        </div>
+                        <div class="skill-chip" title="Intermediate">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                            </svg>
+                            <span>MongoDB</span>
+                            <small>Intermediate</small>
+                        </div>
+                        <div class="skill-chip" title="Advanced">
+                            <i class="fab fa-git"></i>
+                            <span>Git</span>
+                            <small>Advanced</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded from projects.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="contact-social">
+                    <h3>Connect on Social Media</h3>
+                    <div class="social-icons-large">
+                        <a href="https://github.com/blaze910" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://wa.me/2348153077566" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:dangogodspower@gmail.com" aria-label="Send email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Full Stack Web Developer. All rights reserved.</p>
+            <ul class="footer-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="https://github.com/blaze910" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/2348153077566" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
