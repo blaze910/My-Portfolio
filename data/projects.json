@@ -13,7 +13,7 @@
         "title": "Smart Farming Dashboard",
         "description": "An intelligent agricultural management system that provides real-time monitoring of crop health, soil conditions, and weather data. Includes analytics, predictive insights, and automated alerts for optimal farming decisions.",
         "tech": ["Next.js", "javascript"],
-        "screenshot": "assets/images/projects/smart-farming-dashboard.jpg",
+        "screenshot": "assets/images/placeholder.svg",
         "githubUrl": "https://github.com/yourusername/smart-farming-dashboard",
         "liveDemoUrl": "https://smart-farming-demo.example.com"
     },
@@ -22,7 +22,7 @@
         "title": "Marvel Studio",
         "description": "A creative studio platform for digital art and design collaboration. Features include project workspace management, real-time collaboration tools, asset library, and portfolio showcase capabilities.",
         "tech": ["HTML5", "CSS3", "javascript"],
-        "screenshot": "assets/images/projects/marvel-studio.jpg",
+        "screenshot": "assets/images/placeholder.svg",
         "githubUrl": "https://github.com/yourusername/marvel-studio",
         "liveDemoUrl": "https://marvel-studio-demo.example.com"
     }
@@ -32,7 +32,7 @@
         "description": "A modern portfolio website showcasing projects and skills. Features include responsive design, smooth animations, and easy navigation.",
         "tech": ["HTML5", "CSS3", "javascript"],
         "screenshot": "assets/images/projects/portfolio-website.jpg",
-        "githubUrl": "https://github.com/yourusername/portfolio-website",
+        "githubUrl": "https://github.com/blaze910/My-Portfolio",
         "liveDemoUrl": "https://portfolio-website-demo.example.com"
     }
  

@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Full Stack Web Developer Portfolio - Showcasing React, Node.js, and modern web development expertise.">
+    <meta name="theme-color" content="#007bff">
     <title> Blaze.dev </title>
+
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/images/profile.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='white'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='700' fill='%232563eb'%3EB%3C/text%3E%3C/svg%3E">
@@ -48,7 +55,7 @@
     <header class="hero" id="hero">
         <div class="hero-content">
             <div class="profile-image-container">
-                <img src="assets/images/profile.jpg" alt="Profile photo" class="profile-image">
+                <img src="assets/images/profile.jpg" alt="Profile photo" class="profile-image" width="200" height="200" loading="eager" fetchpriority="high" decoding="async">
             </div>
             <h1 class="hero-title">Full Stack Web Developer</h1>
             <p class="hero-tagline">I'm Dango God'spower, I build reliable web apps with React, Next.js, and PostgreSQL.</p>
@@ -197,18 +204,20 @@
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
             <div class="contact-content">
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqegblnl" method="POST">
+                    <input type="hidden" name="_subject" value="New portfolio contact message">
+                    <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required aria-required="true">
+                        <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" placeholder="Your name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required aria-required="true">
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="you@example.com">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Tell me about your project"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
@@ -261,6 +270,6 @@
     </footer>
 
     <!-- Main Script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -11,7 +11,9 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.getElementById('contactForm');
+const contactSubmitButton = contactForm?.querySelector('button[type="submit"]');
 const projectsGrid = document.getElementById('projectsGrid');
+const DEFAULT_PROJECT_IMAGE = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="0" x2="1" y1="0" y2="1"%3E%3Cstop offset="0%25" stop-color="%230f172a"/%3E%3Cstop offset="100%25" stop-color="%232563eb"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="1200" height="675" rx="24" fill="url(%23g)"/%3E%3Ctext x="50%25" y="48%25" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="700" fill="white"%3EProject Preview%3C/text%3E%3Ctext x="50%25" y="58%25" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="rgba(255,255,255,0.85)"%3EScreenshot coming soon%3C/text%3E%3C/svg%3E';
 
 // ============================
 // Theme Toggle
@@ -32,11 +34,13 @@ function initializeTheme() {
 }
 
 // Toggle theme
-themeToggle.addEventListener('click', () => {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    updateThemeIcon(isDarkMode);
-    localStorage.setItem('portfolio-theme', isDarkMode ? 'dark' : 'light');
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const isDarkMode = document.body.classList.toggle('dark-mode');
+        updateThemeIcon(isDarkMode);
+        localStorage.setItem('portfolio-theme', isDarkMode ? 'dark' : 'light');
+    });
+}
 
 // Update theme icon
 function updateThemeIcon(isDarkMode) {
@@ -54,10 +58,12 @@ function updateThemeIcon(isDarkMode) {
 // Mobile Menu
 // ============================
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
 
 // Close mobile menu on link click
 navLinks.forEach(link => {
@@ -99,14 +105,7 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Observe project cards
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.querySelectorAll('.project-card').forEach(card => {
-            observer.observe(card);
-        });
-    }, 500);
-});
+// Project cards are observed as they are rendered in loadProjects().
 
 // ============================
 // Smooth Scroll for Navigation
@@ -130,48 +129,76 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================
 
 const navbar = document.getElementById('navbar');
+let isNavbarTicking = false;
+
+function updateNavbarShadow() {
+    if (!navbar) return;
+    navbar.style.boxShadow = window.scrollY > 10 ? 'var(--shadow-md)' : 'var(--shadow-sm)';
+    isNavbarTicking = false;
+}
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-        navbar.style.boxShadow = 'var(--shadow-md)';
-    } else {
-        navbar.style.boxShadow = 'var(--shadow-sm)';
+    if (!isNavbarTicking) {
+        window.requestAnimationFrame(updateNavbarShadow);
+        isNavbarTicking = true;
     }
-});
+}, { passive: true });
 
 // ============================
 // Form Handling
 // ============================
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Validate form
-    if (!name || !email || !message) {
-        showNotification('Please fill in all fields', 'error');
-        return;
-    }
-    
-    // Validate email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        showNotification('Please enter a valid email', 'error');
-        return;
-    }
-    
-    // Show success message (since we can't actually send emails from frontend)
-    showNotification('Message sent! I\'ll get back to you soon.', 'success');
-    
-    // Log to console for debugging
-    console.log('Form submitted:', { name, email, message });
-    
-    // Reset form
-    contactForm.reset();
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+            showNotification('Please fill in all fields', 'error');
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showNotification('Please enter a valid email', 'error');
+            return;
+        }
+
+        setFormSubmittingState(true);
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Form submission failed.');
+            }
+
+            showNotification('Message sent successfully. I\'ll get back to you soon.', 'success');
+            contactForm.reset();
+        } catch (error) {
+            console.error('Contact form error:', error);
+            showNotification('Unable to send message right now. Please try again or email me directly.', 'error');
+        } finally {
+            setFormSubmittingState(false);
+        }
+    });
+}
+
+function setFormSubmittingState(isSubmitting) {
+    if (!contactSubmitButton) return;
+    contactSubmitButton.disabled = isSubmitting;
+    contactSubmitButton.textContent = isSubmitting ? 'Sending...' : 'Send Message';
+}
 
 // Notification system
 function showNotification(message, type = 'success') {
@@ -207,9 +234,15 @@ function showNotification(message, type = 'success') {
 // ============================
 
 async function loadProjects() {
+    if (!projectsGrid) return;
+
     try {
-        // Fetch projects data
         const response = await fetch('data/projects.json');
+
+        if (!response.ok) {
+            throw new Error(`Failed to load projects: ${response.status}`);
+        }
+
         const projects = await response.json();
         
         // Populate projects grid
@@ -237,13 +270,17 @@ async function loadProjects() {
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
-    
+
     const techStack = project.tech
         .map(tech => `<span class="tech-tag">${tech}</span>`)
         .join('');
-    
+
+    const imageSrc = project.screenshot || DEFAULT_PROJECT_IMAGE;
+    const hasGithubUrl = project.githubUrl && !project.githubUrl.includes('yourusername');
+    const hasLiveDemoUrl = project.liveDemoUrl && !project.liveDemoUrl.includes('example.com');
+
     card.innerHTML = `
-        <img src="${project.screenshot}" alt="${project.title}" class="project-image" onerror="this.src='assets/images/placeholder.jpg'">
+        <img src="${imageSrc}" alt="${project.title} preview" class="project-image" loading="lazy" decoding="async">
         <div class="project-content">
             <h3 class="project-title">${project.title}</h3>
             <div class="project-description">
@@ -253,16 +290,31 @@ function createProjectCard(project) {
                 ${techStack}
             </div>
             <div class="project-buttons">
+                ${hasGithubUrl ? `
                 <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     <i class="fab fa-github"></i> GitHub
-                </a>
+                </a>` : `
+                <span class="btn btn-secondary btn-disabled" aria-disabled="true">
+                    <i class="fab fa-github"></i> Private
+                </span>`}
+                ${hasLiveDemoUrl ? `
                 <a href="${project.liveDemoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
+                </a>` : `
+                <span class="btn btn-primary btn-disabled" aria-disabled="true">
+                    <i class="fas fa-clock"></i> Coming Soon
+                </span>`}
             </div>
         </div>
     `;
-    
+
+    const projectImage = card.querySelector('.project-image');
+    if (projectImage) {
+        projectImage.addEventListener('error', () => {
+            projectImage.src = DEFAULT_PROJECT_IMAGE;
+        }, { once: true });
+    }
+
     return card;
 }
 
