@@ -6,7 +6,7 @@
         "tech": ["Next.js"],
         "screenshot": "assets/images/projects/task-tracker.jpg",
         "githubUrl": "https://github.com/blaze910/Task-Tracker",
-        "liveDemoUrl": ""
+        "liveDemoUrl": "https://task-tracker-nine-zeta.vercel.app"
     },
     {
         "id": 2,
