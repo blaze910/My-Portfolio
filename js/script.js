@@ -302,7 +302,7 @@ function createProjectCard(project) {
                     <i class="fas fa-external-link-alt"></i> Live Demo
                 </a>` : `
                 <span class="btn btn-primary btn-disabled" aria-disabled="true">
-                    <i class="fas fa-clock"></i> Coming Soon
+                    <i class="fas fa-clock"></i> Coming Soon!
                 </span>`}
             </div>
         </div>

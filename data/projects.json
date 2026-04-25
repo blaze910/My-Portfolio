@@ -6,7 +6,7 @@
         "tech": ["Next.js"],
         "screenshot": "assets/images/projects/task-tracker.jpg",
         "githubUrl": "https://github.com/blaze910/Task-Tracker",
-        "liveDemoUrl": "https://task-tracker-git-vercel-react-s-56ddbe-blazes-projects-38905151.vercel.app/"
+        "liveDemoUrl": "https://task-tracker-nine-zeta.vercel.app/"
     },
     {
         "id": 2,
@@ -32,8 +32,8 @@
         "description": "A modern portfolio website showcasing projects and skills. Features include responsive design, smooth animations, and easy navigation.",
         "tech": ["HTML5", "CSS3", "javascript"],
         "screenshot": "assets/images/projects/portfolio-website.jpg",
-        "githubUrl": "https://github.com/blaze910/My-Portfolio",
+        "githubUrl": "https://github.com/yourusername/portfolio-website",
         "liveDemoUrl": "https://portfolio-website-demo.example.com"
     }
- 
+
 ]
