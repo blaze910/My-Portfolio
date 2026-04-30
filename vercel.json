@@ -1,0 +1,7 @@
+{
+  "analyticsId": "auto",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "installCommand": "npm install"
+}

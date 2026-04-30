@@ -1,0 +1,16 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Full Stack Web Developer Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["portfolio", "web-developer"],
+  "author": "Dango God'spower",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
