@@ -6,7 +6,7 @@
         "tech": ["Next.js"],
         "screenshot": "assets/images/projects/task-tracker.jpg",
         "githubUrl": "https://github.com/blaze910/Task-Tracker",
-        "liveDemoUrl": "https://task-tracker-nine-zeta.vercel.app/"
+        "liveDemoUrl": "https://task-tracker-nine-zeta.vercel.app"
     },
     {
         "id": 2,
@@ -33,7 +33,7 @@
         "tech": ["HTML5", "CSS3", "javascript"],
         "screenshot": "assets/images/projects/portfolio-website.jpg",
         "githubUrl": "https://github.com/yourusername/portfolio-website",
-        "liveDemoUrl": "https://portfolio-website-demo.example.com"
+        "liveDemoUrl": "https://portfolio-demo.example.com"
     }
 
 ]
