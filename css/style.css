@@ -150,6 +150,10 @@ a:hover {
 }
 
 a:focus {
+    outline: none;
+}
+
+a:focus-visible {
     outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
 }
@@ -565,6 +569,7 @@ section {
     flex: 1 1 160px;
     text-align: center;
 }
+
 
 /* ============================
    BUTTONS

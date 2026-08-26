@@ -13,9 +13,9 @@
         "title": "Smart Farming Dashboard",
         "description": "An intelligent agricultural management system that provides real-time monitoring of crop health, soil conditions, and weather data. Includes analytics, predictive insights, and automated alerts for optimal farming decisions.",
         "tech": ["Next.js", "javascript"],
-        "screenshot": "assets/images/placeholder.svg",
-        "githubUrl": "https://github.com/yourusername/smart-farming-dashboard",
-        "liveDemoUrl": "https://smart-farming-demo.example.com"
+        "screenshot": "assets/images/projects/farm-pulse.jpg",
+        "githubUrl": "https://github.com/blaze910/Farm-Pulse",
+        "liveDemoUrl": "https://www.farmpulse.name.ng/"
     },
     {
         "id": 3,
@@ -25,15 +25,15 @@
         "screenshot": "assets/images/placeholder.svg",
         "githubUrl": "https://github.com/yourusername/marvel-studio",
         "liveDemoUrl": "https://marvel-studio-demo.example.com"
-    }
-    ,{
+    },
+    {
         "id": 4,
-        "title": "Portfolio",
-        "description": "A modern portfolio website showcasing projects and skills. Features include responsive design, smooth animations, and easy navigation.",
+        "title": "E-Commerce Storefront",
+        "description": "This is a simple e-commerce storefront built with static pages and JavaScript. It features a clean and responsive design, allowing users to browse products, view details, and add items to their cart. The project demonstrates basic e-commerce functionality without backend integration.",
         "tech": ["HTML5", "CSS3", "javascript"],
-        "screenshot": "assets/images/projects/portfolio-website.jpg",
-        "githubUrl": "https://github.com/yourusername/portfolio-website",
-        "liveDemoUrl": "https://portfolio-demo.example.com"
-    }
+        "screenshot": "assets/images/projects/e-commerce.jpg",
+        "githubUrl": "https://github.com/blaze910/E-COMMERCE",
+        "liveDemoUrl": "https://novaedge-commerce.vercel.app"
+    } 
 
 ]

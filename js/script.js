@@ -1,10 +1,3 @@
-/**
- * Portfolio Website - JavaScript Functionality
- */
-
-// ============================
-// DOM Elements
-// ============================
 
 const themeToggle = document.getElementById('themeToggle');
 const hamburger = document.getElementById('hamburger');
@@ -13,7 +6,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.getElementById('contactForm');
 const contactSubmitButton = contactForm?.querySelector('button[type="submit"]');
 const projectsGrid = document.getElementById('projectsGrid');
-const DEFAULT_PROJECT_IMAGE = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="0" x2="1" y1="0" y2="1"%3E%3Cstop offset="0%25" stop-color="%230f172a"/%3E%3Cstop offset="100%25" stop-color="%232563eb"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="1200" height="675" rx="24" fill="url(%23g)"/%3E%3Ctext x="50%25" y="48%25" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="700" fill="white"%3EProject Preview%3C/text%3E%3Ctext x="50%25" y="58%25" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="rgba(255,255,255,0.85)"%3EScreenshot coming soon%3C/text%3E%3C/svg%3E';
+const DEFAULT_PROJECT_IMAGE = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="0" x2="1" y1="0" y2="1"%3E%3Cstop offset="0%25" stop-color="%230f172a"/%3E%3Cstop offset="100%25" stop-color="%232563eb"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="1200" height="675" rx="24" fill="url(%23g)"/%3E%3Ctext x="50%25" y="48%25" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="700" fill="white"%3EUnavailable at the moment%3C/text%3E%3Ctext x="50%25" y="58%25" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="rgba(255,255,255,0.85)"%3EComing soon!%3C/text%3E%3C/svg%3E';
 
 // ============================
 // Theme Toggle
